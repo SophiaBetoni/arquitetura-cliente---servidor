@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Livraria </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> Livraria </h1>
+
+        <p class="subtitulo">
+            Adicione livros, reserve e organize sua coleção
+        </p>
+
+        <div class="formulario">
+
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Nome do livro"
+            >
+
+            <input
+                type="text"
+                id="autor"
+                placeholder="Autor"
+            >
+
+            <button onclick="salvarLivro()">
+                Adicionar
+            </button>
+
+        </div>
+
+        <div id="lista-livros"></div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+</html>
